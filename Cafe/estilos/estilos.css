@@ -69,7 +69,8 @@
   font-weight: bold;
 }
 body {
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    background: linear-gradient(180deg, #6f4e37 0%, #3d2a1d 100%);
+    background-attachment: fixed;
     font-family: sans-serif;
     padding: 20px;
   }
@@ -95,6 +96,8 @@ body {
   .menu {
     width: 80%;
     background-color: burlywood;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -190,7 +193,7 @@ body {
   text-decoration: none;
 }
 
-/* Suma y resta de cantidad en productos */
+
 .cantidad-control {
     display: flex;
     align-items: center;

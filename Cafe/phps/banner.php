@@ -1,6 +1,6 @@
 <header class="banner-flotante">
     <div class="banner-imagen">
-        <img src="imagenes/Gemini_Generated_Image_odjwlqodjwlqodjw.png" alt="Banner de Café">
+        <img src="imagenes/fd5363e2-9c04-474a-916b-32fa3587545d.jpg" alt="Banner de Café">
     </div>
     <nav class="banner-nav">
         <ul>
