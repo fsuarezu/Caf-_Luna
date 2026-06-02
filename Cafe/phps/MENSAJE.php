@@ -1,4 +1,4 @@
-<!-- INICIO DE LA ALERTA PHP -->
+
 <?php if (isset($_GET['enviado'])): ?>
 	<div style="background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 5px; margin-bottom: 20px;">
 		<strong>¡Éxito!</strong> Su consulta ha sido enviada.

@@ -216,3 +216,62 @@ body {
   min-width: 20px;
   text-align: center;
 }
+
+
+/* css de bloques en zig-zag */
+.contenedor-zigzag {
+    width: 95%; 
+    max-width: 1400px;
+    margin: 40px auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+}
+
+.bloque-tarjeta {
+    width: 100%; 
+    background-color: burlywood;
+
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+    box-sizing: border-box;
+}
+
+.bloque-tarjeta h2 {
+    color: #3b2818;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.bloque-tarjeta p {
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.bloque-tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #5c3a21; 
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .bloque-tarjeta {
+        width: 45%; 
+    }
+
+    .bloque-tarjeta:nth-of-type(odd) {
+        align-self: flex-start;
+    }
+
+    .bloque-tarjeta:nth-of-type(even) {
+        align-self: flex-end;
+    }
+}
+/* css fin de bloques en zig-zag */
