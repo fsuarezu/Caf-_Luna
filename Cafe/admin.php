@@ -33,8 +33,8 @@ include("phps/conexion.php");
                     <th>Acciones</th>
                 </tr>
                 <?php
-                $resultado = mysqli_query($conexion, "SELECT * FROM productos ORDER BY categoria");
-                while ($fila = mysqli_fetch_assoc($resultado)) {
+                $resultado = $conexion->query("SELECT * FROM productos ORDER BY categoria");
+                while ($fila = $resultado->fetch_assoc()) {
                 ?>
                 <tr>
                     <td><?php echo $fila["nombre"]; ?></td>

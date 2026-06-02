@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
         <?php include ("phps/MENSAJE.php"); ?>
         <hr>
         
-        <form action="/Cafe/phps/loginProcesar.php" method="POST" class="formulario">
+        <form action="phps/loginProcesar.php" method="POST" class="formulario">
           
           <label for="correo">Correo electrónico:</label><br>
           <input type="email" id="correo" name="correo" placeholder="ejemplo@mail.com" required><br>
