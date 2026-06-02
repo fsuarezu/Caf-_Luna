@@ -275,3 +275,100 @@ body {
     }
 }
 /* css fin de bloques en zig-zag */
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .menu {
+    width: 95%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .banner-flotante {
+    flex-direction: column;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
+
+  .banner-imagen {
+    width: 100%;
+  }
+
+  .banner-imagen img {
+    height: 60px;
+  }
+
+  .banner-nav {
+    width: 100%;
+  }
+
+  .banner-nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .flavor, .dessert {
+    flex: 1 1 50%;
+  }
+
+  .price {
+    flex: 0 1 auto;
+    text-align: right;
+  }
+
+  .carrito-flotante {
+    width: 55px;
+    height: 55px;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tabla-admin {
+    font-size: 12px;
+  }
+
+  .tabla-admin th, .tabla-admin td {
+    padding: 5px;
+  }
+
+  .bloque-tarjeta {
+    width: 100% !important;
+    align-self: unset !important;
+  }
+  .cantidad-control {
+    flex: 0 1 auto;
+    margin-left: auto;
+  }
+}
