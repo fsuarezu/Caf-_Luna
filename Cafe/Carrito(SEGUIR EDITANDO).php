@@ -12,34 +12,36 @@
 
     <div class="menu">
       <main>
+        
+      <main>
         <h1>Cafe Luna</h1>
-        <p class="established">Est. 2026</p>
+        <p class="established">Resumen de tu pedido</p>
         <hr>
-        <section>
-          <h2>Cafés y Especialidades</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="icono de café"/>
-          
-          
-        <section>
-          <h2>Sándwiches y Salados</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="icono de comida salada"/>
-          
-          
-        <section>
-        <h2>Repostería y Dulces</h2>
-        <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="icono de repostería"/>
         
-        
-      <section>
-        <h2>Bebidas Frías</h2>
-        <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="icono de bebida fría"/>
-        
-        
-      </section>
+        <!-- Aquí es donde JavaScript pondrá los productos -->
+        <section id="contenedor-resumen-carrito">
+            <!-- El contenido se generará dinámicamente -->
+        </section>
+
+        <!-- Sección del total -->
+        <section class="total-final-container" style="text-align: right; margin-top: 20px;">
+            <h2>Total a Pagar: $<span id="total-final-pagina">0</span></h2>
+            <button id="btn-pagar" style="padding: 10px 20px; background-color: #4a3623; color: white; border: none; cursor: pointer; font-size: 16px;">Proceder al Pago</button>
+        </section>
+      </main>
       </main>
       <hr class="bottom-line">
       <footer>
       </footer>
     </div>
+    <hr class="bottom-line">
+      <footer>
+      </footer>
+    </div>
+    
+    <!-- Conectamos el script que lee la memoria -->
+    <script src="js/pagina-carrito.js"></script>
+  </body>
+</html>
   </body>
 </html>
