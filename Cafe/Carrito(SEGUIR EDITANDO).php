@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,10 +34,7 @@
       <footer>
       </footer>
     </div>
-    <hr class="bottom-line">
-      <footer>
-      </footer>
-    </div>
+    
     
     <!-- Conectamos el script que lee la memoria -->
     <script src="js/pagina-carrito.js"></script>

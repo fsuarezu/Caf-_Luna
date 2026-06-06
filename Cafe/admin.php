@@ -4,7 +4,7 @@ if (!isset($_SESSION["admin"])) {
     header("Location: login.php");
     exit();
 }
-include("phps/conexion.php");
+include("bd/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

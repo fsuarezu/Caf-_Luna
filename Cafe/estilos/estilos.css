@@ -29,39 +29,42 @@
 .banner-flotante {
   position: sticky;
   top: 0;
-  z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
   background-color: burlywood;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  
-  
-  margin-top: -20px;
-  margin-left: -20px;
   width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-top: -20px;
+  padding: 0 10px;
 }
 
 .banner-imagen {
-  width: 40%;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 .banner-imagen img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  margin: 0; 
+    display: inline;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
-
 .banner-nav {
-  width: 60%;
+  display: flex;
+  align-items: center;
 }
 
 .banner-nav ul {
   display: flex;
-  justify-content: space-around;
+  gap: 40px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .banner-nav a {
@@ -73,7 +76,8 @@ body {
     background-attachment: fixed;
     font-family: sans-serif;
     padding: 20px;
-  }
+    overflow-x: hidden;
+}
   
   h1 {
     font-size: 40px;
@@ -105,12 +109,11 @@ body {
     margin-top: 50px;
   }
   
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
   
   hr {
     height: 2px;

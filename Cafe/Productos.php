@@ -7,9 +7,11 @@
     <link href="estilos/estilos.css" rel="stylesheet"/>
   </head>
   <body>
+
     
-    <?php include("phps/banner.php");?>
+    <?php include("phps/banner.php"); ?>
     <?php include("phps/carritoBanner.php"); ?>
+
     <div class="menu">
       <main>
         <h1>Cafe Luna</h1>

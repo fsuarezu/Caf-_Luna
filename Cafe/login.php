@@ -16,13 +16,15 @@
         <?php include ("phps/MENSAJE.php"); ?>
         <hr>
         
-        <form action="/Cafe/phps/loginProcesar.php" method="POST" class="formulario">
+        <form action="phps/loginProcesar.php" method="POST" class="formulario">
           
           <label for="correo">Correo electrónico:</label><br>
           <input type="email" id="correo" name="correo" placeholder="ejemplo@mail.com" required><br>
 
           <label for="telefono">Contraseña:</label><br>
           <input type="password" id="contrasenia" name="contrasenia" required><br>
+          <input type="checkbox" id="recordar" name="recordar">
+          <label for="recordar">Recordar sesión</label><br><br>
           <button type="submit">Entrar</button>
         </form>
 
