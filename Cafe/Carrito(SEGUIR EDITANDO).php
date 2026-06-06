@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Menu</title>
     <link href="estilos/estilos.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="imagenes/favicon.png">
   </head>
   <body>
     
