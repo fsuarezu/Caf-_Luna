@@ -27,7 +27,7 @@ include("bd/conexion.php");
             <hr>
 
             <h2>Productos</h2>
-            <a href="phps/adminAgregar.php" class="btn-agregar">+ Agregar producto</a>
+            <a href="AdminPhps/adminAgregar.php" class="btn-agregar">+ Agregar producto</a>
 
             <div class="contenedor-productos-admin">
                 <?php
@@ -41,15 +41,15 @@ include("bd/conexion.php");
                     </div>
                     <p class="tarjeta-precio">$<?php echo number_format($fila["precio"], 0, ',', '.'); ?></p>
                     <div class="tarjeta-acciones">
-                        <a href="phps/adminEditar.php?id=<?php echo $fila['id']; ?>" class="btn-editar">Editar</a>
-                        <a href="phps/adminEliminar.php?id=<?php echo $fila['id']; ?>" class="btn-eliminar" onclick="return confirm('¿Eliminar este producto?')">Eliminar</a>
+                        <a href="AdminPhps/adminEditar.php?id=<?php echo $fila['id']; ?>" class="btn-editar">Editar</a>
+                        <a href="AdminPhps/adminEliminar.php?id=<?php echo $fila['id']; ?>" class="btn-eliminar" onclick="return confirm('¿Eliminar este producto?')">Eliminar</a>
                     </div>
                 </div>
                 <?php } ?>
             </div>
 
             <br>
-            <a href="phps/adminCerrarSesion.php" class="btn-cerrar-sesion">Cerrar sesión</a>
+            <a href="AdminPhps/adminCerrarSesion.php" class="btn-cerrar-sesion">Cerrar sesión</a>
         </main>
     </div>
 </body>

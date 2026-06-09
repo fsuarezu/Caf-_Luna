@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php include("phps/banner.php"); ?>
-
+    
     <div class="menu">
       <main>
         <h1>Quiénes Somos</h1>

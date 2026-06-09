@@ -32,6 +32,7 @@
 .banner-flotante {
   position: sticky;
   top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -40,7 +41,7 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   width: calc(100% + 40px);
   margin-left: -20px;
-  margin-top: -20px;
+  margin-top: 0px;
   padding: 0 10px;
 }
 
@@ -79,7 +80,9 @@ body {
     background-attachment: fixed;
     font-family: sans-serif;
     padding: 20px;
+    margin: 0;
     overflow-x: hidden;
+    
 }
   
   h1 {
@@ -429,77 +432,104 @@ img {
 }
 
 .tarjeta-producto-admin {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fdf5e6;
-    border-radius: 8px;
-    padding: 12px 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf5e6;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .tarjeta-info {
-    flex: 1;
+  flex: 1;
 }
 
 .tarjeta-nombre {
-    margin: 0;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: left;
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
 }
 
 .tarjeta-categoria {
-    margin: 0;
-    font-size: 12px;
-    color: brown;
-    text-align: left;
+  margin: 0;
+  font-size: 12px;
+  color: brown;
+  text-align: left;
 }
 
 .tarjeta-precio {
-    margin: 0 20px;
-    font-weight: bold;
-    font-size: 15px;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .tarjeta-acciones {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 .btn-agregar {
-    display: inline-block;
-    background-color: #fdf5e6;
-    color: brown;
-    border: 2px solid brown;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 15px;
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: brown;
+  border: 2px solid brown;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 15px;
 }
 
 .btn-agregar:hover {
-    background-color: brown;
-    color: #fdf5e6;
+  background-color: brown;
+  color: #fdf5e6;
 }
 
 .btn-cerrar-sesion {
-    display: inline-block;
-    background-color: brown;
-    color: #fdf5e6;
-    border: 2px solid brown;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 15px;
+  display: inline-block;
+  background-color: brown;
+  color: #fdf5e6;
+  border: 2px solid brown;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
 }
 
 .btn-cerrar-sesion:hover {
-    background-color: #5a1a1a;
-    color: #fdf5e6;
+  background-color: #5a1a1a;
+  color: #fdf5e6;
 }
 
 .btn-cerrar-sesion:visited, .btn-agregar:visited {
-    color: inherit;
+  color: inherit;
+}
+
+/* Carrusel */
+.carousel {
+  z-index: 1;
+  max-height: 350px;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.carousel img {
+  height: 350px;
+  object-fit: cover;
+}
+
+/*Botones de pago*/
+.metodo-btn.seleccionado {
+    border-color: brown;
+    background-color: brown;
+    color: #fdf5e6;
+}
+
+.metodo-btn.seleccionado p {
+    color: #fdf5e6;
 }

@@ -27,7 +27,7 @@
         <!-- Sección del total -->
         <section class="total-final-container" style="text-align: right; margin-top: 20px;">
             <h2>Total a Pagar: $<span id="total-final-pagina">0</span></h2>
-            <button id="btn-pagar" style="padding: 10px 20px; background-color: #4a3623; color: white; border: none; cursor: pointer; font-size: 16px;">Proceder al Pago</button>
+            <a href="pago.php"><button class="btn-cerrar-sesion">Proceder al Pago</button></a>
         </section>
       </main>
       </main>
