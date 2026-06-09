@@ -13,6 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($contrasenia, $usuario["contrasenia"])) {
             $_SESSION["admin"] = $usuario["correo"];
+
+            if (isset($_POST["recordar"])) {
+                setcookie("recordar_correo", $usuario["correo"], strtotime("+30 days"), "/");
+            }
+
             header("Location: ../admin.php");
             exit();
         }

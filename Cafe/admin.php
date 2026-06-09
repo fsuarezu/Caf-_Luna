@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["admin"]) && isset($_COOKIE["recordar_correo"])) {
+    $_SESSION["admin"] = $_COOKIE["recordar_correo"];
+}
+
 if (!isset($_SESSION["admin"])) {
     header("Location: login.php");
     exit();
@@ -22,34 +27,29 @@ include("bd/conexion.php");
             <hr>
 
             <h2>Productos</h2>
-            <a href="phps/adminAgregar.php">+ Agregar producto</a>
-            <br><br>
+            <a href="phps/adminAgregar.php" class="btn-agregar">+ Agregar producto</a>
 
-            <table class="tabla-admin">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Categoría</th>
-                    <th>Acciones</th>
-                </tr>
+            <div class="contenedor-productos-admin">
                 <?php
                 $resultado = $conexion->query("SELECT * FROM productos ORDER BY categoria");
                 while ($fila = $resultado->fetch_assoc()) {
                 ?>
-                <tr>
-                    <td><?php echo $fila["nombre"]; ?></td>
-                    <td><?php echo $fila["precio"]; ?></td>
-                    <td><?php echo $fila["categoria"]; ?></td>
-                    <td>
-                        <a href="phps/adminEditar.php?id=<?php echo $fila['id']; ?>">Editar</a> |
-                        <a href="phps/adminEliminar.php?id=<?php echo $fila['id']; ?>" onclick="return confirm('¿Eliminar este producto?')">Eliminar</a>
-                    </td>
-                </tr>
+                <div class="tarjeta-producto-admin">
+                    <div class="tarjeta-info">
+                        <p class="tarjeta-nombre"><?php echo $fila["nombre"]; ?></p>
+                        <p class="tarjeta-categoria"><?php echo $fila["categoria"]; ?></p>
+                    </div>
+                    <p class="tarjeta-precio">$<?php echo number_format($fila["precio"], 0, ',', '.'); ?></p>
+                    <div class="tarjeta-acciones">
+                        <a href="phps/adminEditar.php?id=<?php echo $fila['id']; ?>" class="btn-editar">Editar</a>
+                        <a href="phps/adminEliminar.php?id=<?php echo $fila['id']; ?>" class="btn-eliminar" onclick="return confirm('¿Eliminar este producto?')">Eliminar</a>
+                    </div>
+                </div>
                 <?php } ?>
-            </table>
+            </div>
 
             <br>
-            <a href="phps/adminCerrarSesion.php">Cerrar sesión</a>
+            <a href="phps/adminCerrarSesion.php" class="btn-cerrar-sesion">Cerrar sesión</a>
         </main>
     </div>
 </body>
