@@ -1,0 +1,38 @@
+Table usuarios {
+  id int [pk, increment]
+  correo varchar(100)
+  contrasenia varchar(255)
+  rol varchar(20)
+}
+
+Table productos {
+  id int [pk, increment]
+  nombre varchar(100)
+  precio int
+  id_categoria int [ref: > categoria.id]
+}
+Table categoria{
+  id int [pk, increment]
+  nombre varchar(50)
+}
+
+Table carrito {
+  id int [pk, increment]
+  producto_id int [ref: > productos.id]
+  cantidad int
+}
+
+Table pedidos {
+  id int [pk, increment]
+  nombre varchar(100)
+  correo varchar(100)
+  id_metodo int [ref: > metodo.id]
+  productos text
+  total int
+  fecha datetime
+}
+
+table metodo{
+  id int [pk, increment]
+  nombre char(8)
+}
