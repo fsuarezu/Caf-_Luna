@@ -23,11 +23,14 @@
 
           <label for="telefono">Contraseña:</label><br>
           <input type="password" id="contrasenia" name="contrasenia" required><br>
+
           <div class="checkbox-group">
               <input type="checkbox" id="recordar" name="recordar">
               <label for="recordar">Recordar sesión</label>
           </div>
+
           <button type="submit">Entrar</button>
+          <a href="recuperar.php">¿Olvidaste tu contraseña?</a>
         </form>
 
       </main>

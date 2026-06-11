@@ -1,13 +1,21 @@
 <?php
 include("bd/conexion.php");
 
-$id = intval($_GET["id"]);
-$pedido = $conexion->query("SELECT * FROM pedidos WHERE id = '$id'")->fetch_assoc();
+// Obtenemos el id del pedido desde la URL
+$id = $_GET["id"];
 
+// Buscamos el pedido en la base de datos con el nombre del método de pago
+$pedido = $conexion->query("SELECT pedido.*, metodo.nombre AS nombre_metodo 
+    FROM pedido 
+    JOIN metodo ON pedido.id_metodo = metodo.id 
+    WHERE pedido.id = '$id'")->fetch_assoc();
+
+// Si no existe el pedido, mostramos un error
 if (!$pedido) {
     die("Pedido no encontrado.");
 }
 
+// Convertimos el texto JSON de productos a un arreglo
 $productos = json_decode($pedido["productos"], true);
 ?>
 <!DOCTYPE html>
@@ -26,15 +34,17 @@ $productos = json_decode($pedido["productos"], true);
             <h1>¡Pedido Confirmado!</h1>
             <hr>
 
+            <!-- Mostramos los datos del pedido -->
             <p><strong>N° de pedido:</strong> #<?php echo $pedido["id"]; ?></p>
             <p><strong>Nombre:</strong> <?php echo $pedido["nombre"]; ?></p>
             <p><strong>Correo:</strong> <?php echo $pedido["correo"]; ?></p>
-            <p><strong>Método de pago:</strong> <?php echo ucfirst($pedido["metodo"]); ?></p>
+            <p><strong>Método de pago:</strong> <?php echo ucfirst($pedido["nombre_metodo"]); ?></p>
             <p><strong>Fecha:</strong> <?php echo $pedido["fecha"]; ?></p>
 
             <hr>
             <h2>Detalle del Pedido</h2>
 
+            <!-- Mostramos cada producto del pedido -->
             <?php foreach ($productos as $item): ?>
             <div class="item">
                 <p class="flavor"><?php echo $item["nombre"]; ?></p>
@@ -53,7 +63,7 @@ $productos = json_decode($pedido["productos"], true);
     </div>
 
     <script>
-        // Limpiar el carrito después de confirmar el pedido
+        // Limpiamos el carrito del navegador después de confirmar el pedido
         localStorage.removeItem("carritoCafeLuna");
         localStorage.removeItem("totalCafeLuna");
     </script>
