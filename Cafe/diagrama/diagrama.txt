@@ -1,28 +1,36 @@
-Table usuarios {
+Table usuario {
   id int [pk, increment]
   correo varchar(100)
   contrasenia varchar(255)
   rol varchar(20)
 }
 
-Table productos {
+Table token {
+  id int [pk, increment]
+  usuario_id int [ref: > usuario.id]
+  token varchar(255)
+  expiracion datetime
+}
+
+Table producto {
   id int [pk, increment]
   nombre varchar(100)
   precio int
   id_categoria int [ref: > categoria.id]
 }
-Table categoria{
+
+Table categoria {
   id int [pk, increment]
   nombre varchar(50)
 }
 
 Table carrito {
   id int [pk, increment]
-  producto_id int [ref: > productos.id]
+  producto_id int [ref: > producto.id]
   cantidad int
 }
 
-Table pedidos {
+Table pedido {
   id int [pk, increment]
   nombre varchar(100)
   correo varchar(100)
@@ -32,7 +40,7 @@ Table pedidos {
   fecha datetime
 }
 
-table metodo{
+Table metodo {
   id int [pk, increment]
   nombre char(8)
 }
