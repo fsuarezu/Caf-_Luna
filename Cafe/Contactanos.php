@@ -14,7 +14,7 @@
     <div class="menu">
       <main>
         <h1>Contáctanos</h1>
-        <?php include ("phps/MENSAJE.php"); ?>
+        <?php include ("phps/mensaje.php"); ?>
         <hr>
         
         <form action="contacto.php" method="POST" class="formulario">

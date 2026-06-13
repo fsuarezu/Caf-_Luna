@@ -22,7 +22,7 @@
       <div class="bloque-tarjeta">
         <h2>Nuestra Historia</h2>
         <p>Fundada con la pasión de compartir la verdadera esencia del café de especialidad, Café Luna nació como un sueño que pronto se convirtió en nuestro acogedor local en el corazón de Santiago. Nuestro viaje ha estado guiado por la dedicación, el esfuerzo y el deseo de crear momentos inolvidables en cada taza que servimos.</p>
-        <img src="imagenes/Gemini_Generated_Image_odjwlqodjwlqodjw.png" alt="Local Cafe Luna">
+        <img src="imagenes/local.png" alt="Local Cafe Luna">
       </div>
 
       <div class="bloque-tarjeta">

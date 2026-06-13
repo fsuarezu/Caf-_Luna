@@ -13,7 +13,7 @@
     <div class="menu">
       <main>
         <h1>Inicio de sesion</h1>
-        <?php include ("phps/MENSAJE.php"); ?>
+        <?php include ("phps/mensaje.php"); ?>
         <hr>
         
         <form action="phps/loginProcesar.php" method="POST" class="formulario">

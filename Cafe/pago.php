@@ -14,7 +14,7 @@
         <main>
             <h1>Método de Pago</h1>
             <hr>
-            <?php include("phps/MENSAJE.php"); ?>
+            <?php include("phps/mensaje.php"); ?>
 
             <form action="phps/procesarPago.php" method="POST" class="formulario">
                 <input type="hidden" name="productos" id="input-productos" value="">

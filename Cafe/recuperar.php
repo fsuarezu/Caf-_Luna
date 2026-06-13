@@ -11,7 +11,7 @@
     <div class="menu">
         <main>
             <h1>Recuperar Contraseña</h1>
-            <?php include("phps/MENSAJE.php"); ?>
+            <?php include("phps/mensaje.php"); ?>
             <hr>
             <form action="phps/recuperarProcesar.php" method="POST" class="formulario">
                 <label>Correo electrónico:</label><br>
