@@ -1,10 +1,115 @@
-.quienessomos {
-    text-align: center;
+/* ==========================================================================
+   ESTILOS GENERALES Y DISEÑO BASE - CAFÉ LUNA
+   ========================================================================== */
+
+/* Fondo degradado y tipografía principal del sitio */
+body {
+  background: linear-gradient(180deg, #6f4e37 0%, #3d2a1d 100%);
+  background-attachment: fixed;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  overflow-x: hidden;
 }
-.checkbox-group {
-    text-align: left;
+
+/* Título principal */
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
-.formulario{
+
+/* Subtítulos de secciones */
+h2 {
+  font-size: 30px;
+}
+
+/* Tipografía de títulos con estilo retro/llamativo */
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+/* Textos alineados por defecto al centro */
+h1, h2, p {
+  text-align: center;
+}
+
+/* Línea de separación decorativa de color café */
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+/* Margen superior para la línea de separación del footer */
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* Enlaces generales del sitio */
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+
+/* Footer de las páginas */
+footer {
+  font-size: 14px;
+}
+
+/* Reseteo del estilo por defecto de la etiqueta address */
+address {
+  font-style: normal;
+}
+
+
+/* ==========================================================================
+   CONTENEDORES PRINCIPALES (LAYOUT)
+   ========================================================================== */
+
+/* Contenedor central tipo "hoja de menú" de la cafetería */
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+  margin-top: 50px;
+}
+
+/* Imágenes generales centradas */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Detalle descriptivo (ej: "Est. 2026") */
+.established {
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   FORMULARIOS DE CONTACTO Y ACCESO
+   ========================================================================== */
+
+/* Estructura del formulario de contacto y login */
+.formulario {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -18,17 +123,33 @@
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
   box-sizing: border-box;
 }
-.formulario input, .formulario textarea, .formulario select{
+
+/* Campos de entrada, áreas de texto y selectores */
+.formulario input, .formulario textarea, .formulario select {
   border: 1px solid black;
   border-radius: 5px;
 }
-.formulario button{
+
+/* Botón de envío de los formularios */
+.formulario button {
   margin-top: 25px;
   padding: 15px;
   border-radius: 8px;
   background-color: burlywood;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Agrupamiento para casillas de verificación (como "Recordar sesión") */
+.checkbox-group {
+  text-align: left;
+}
+
+
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (BANNER SUPERIOR STICKY)
+   ========================================================================== */
+
+/* Contenedor del menú de navegación superior */
 .banner-flotante {
   position: sticky;
   top: 0;
@@ -45,24 +166,29 @@
   padding: 0 10px;
 }
 
+/* Contenedor del logo en el banner */
 .banner-imagen {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 }
 
+/* Imagen del logo */
 .banner-imagen img {
-    display: inline;
-    margin: 0;
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+  display: inline;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
+
+/* Menú de navegación principal */
 .banner-nav {
   display: flex;
   align-items: center;
 }
 
+/* Lista de enlaces de navegación */
 .banner-nav ul {
   display: flex;
   gap: 40px;
@@ -71,121 +197,52 @@
   padding: 0 20px;
 }
 
+/* Enlaces del banner de navegación */
 .banner-nav a {
   text-decoration: none;
   font-weight: bold;
 }
-body {
-    background: linear-gradient(180deg, #6f4e37 0%, #3d2a1d 100%);
-    background-attachment: fixed;
-    font-family: sans-serif;
-    padding: 20px;
-    margin: 0;
-    overflow-x: hidden;
-    
-}
-  
-  h1 {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
-  .established {
-    font-style: italic;
-  }
-  
-  h1, h2, p {
-    text-align: center;
-  }
-  
-  .menu {
-    width: 80%;
-    background-color: burlywood;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 500px;
-    margin-top: 50px;
-  }
-  
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
-  hr {
-    height: 2px;
-    background-color: brown;
-    border-color: brown;
-  }
-  
-  .bottom-line {
-    margin-top: 25px;
-  }
-  
-  h1, h2 {
-    font-family: Impact, serif;
-  }
-  .item {
+
+
+/* ==========================================================================
+   CARTA DIGITAL DE PRODUCTOS
+   ========================================================================== */
+
+/* Fila individual para cada producto del menú */
+.item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 8px 0;
-  }
-  .item p {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .flavor, .dessert {
-    text-align: left;
-    flex: 1;
-  }
-  
-  .price {
-    text-align: center;
-    flex: 1;
-  }
-  
-  footer {
-    font-size: 14px;
-  }
-  
-  address {
-    font-style: normal;
-  }
-  
-  .address {
-    margin-bottom: 5px;
-  }
-  
-  a {
-    color: black;
-  }
-  
-  a:visited {
-    color: black;
-  }
-  
-  a:hover {
-    color: brown;
-  }
-  
-  a:active {
-    color: brown;
-  }
+}
 
-  .carrito-flotante {
+/* Textos dentro de la fila del producto */
+.item p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Nombre del producto (alineado a la izquierda) */
+.flavor, .dessert {
+  text-align: left;
+  flex: 1;
+}
+
+/* Precio del producto (centrado) */
+.price {
+  text-align: center;
+  flex: 1;
+}
+
+
+/* ==========================================================================
+   CARACTERÍSTICAS DEL CARRITO DE COMPRAS E INTERACTIVOS
+   ========================================================================== */
+
+/* Botón flotante redondo para acceder al carrito (ubicación fija) */
+.carrito-flotante {
   position: fixed;
   top: 100px;
   right: 30px;
@@ -202,13 +259,14 @@ img {
   text-decoration: none;
 }
 
-
+/* Controles de cantidad (+ / -) al lado del precio */
 .cantidad-control {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+/* Botones de sumar y restar cantidad */
 .cantidad-control button {
   background-color: brown;
   color: #fdf5e6;
@@ -220,6 +278,7 @@ img {
   cursor: pointer;
 }
 
+/* Visor de cantidad actual elegida */
 .cantidad-control span {
   font-size: 16px;
   min-width: 20px;
@@ -227,77 +286,257 @@ img {
 }
 
 
-/* css de bloques en zig-zag */
+/* ==========================================================================
+   DISEÑO DE TARJETAS EN ZIG-ZAG (QUIÉNES SOMOS)
+   ========================================================================== */
+
+/* Contenedor general de la sección Quiénes Somos */
 .contenedor-zigzag {
-    width: 95%; 
-    max-width: 1400px;
-    margin: 40px auto; 
-    display: flex;
-    flex-direction: column;
-    gap: 60px; 
+  width: 95%; 
+  max-width: 1400px;
+  margin: 40px auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 60px; 
 }
 
+/* Tarjetas individuales de información */
 .bloque-tarjeta {
-    width: 100%; 
-    background-color: burlywood;
-
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
-    box-sizing: border-box;
+  width: 100%; 
+  background-color: burlywood;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+  box-sizing: border-box;
 }
 
+/* Título de cada tarjeta */
 .bloque-tarjeta h2 {
-    color: #3b2818;
-    font-size: 26px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: center;
+  color: #3b2818;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
+/* Texto de descripción en las tarjetas */
 .bloque-tarjeta p {
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 15px;
-    font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
+/* Imagen dentro de las tarjetas informativas */
 .bloque-tarjeta img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid #5c3a21; 
-    display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #5c3a21; 
+  display: block;
 }
 
+/* Distribución en dos columnas alternadas (para pantallas grandes) */
 @media (min-width: 768px) {
-    .bloque-tarjeta {
-        width: 45%; 
-    }
+  .bloque-tarjeta {
+    width: 45%; 
+  }
 
-    .bloque-tarjeta:nth-of-type(odd) {
-        align-self: flex-start;
-    }
+  .bloque-tarjeta:nth-of-type(odd) {
+    align-self: flex-start;
+  }
 
-    .bloque-tarjeta:nth-of-type(even) {
-        align-self: flex-end;
-    }
+  .bloque-tarjeta:nth-of-type(even) {
+    align-self: flex-end;
+  }
 }
-/* css fin de bloques en zig-zag */
 
-/* === RESPONSIVE === */
+
+/* ==========================================================================
+   PANEL DE ADMINISTRACIÓN Y CONTROL DE PRODUCTOS
+   ========================================================================== */
+
+/* Botones para editar y eliminar en el panel de control */
+.btn-editar, .btn-eliminar {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Estilo para botón Editar */
+.btn-editar {
+  background-color: burlywood;
+  color: brown;
+  border: 1px solid brown;
+}
+
+.btn-editar:hover {
+  background-color: brown;
+  color: burlywood;
+}
+
+/* Estilo para botón Eliminar */
+.btn-eliminar {
+  background-color: brown;
+  color: #fdf5e6;
+  border: 1px solid brown;
+}
+
+.btn-eliminar:hover {
+  background-color: #5a1a1a;
+  color: #fdf5e6;
+}
+
+.btn-editar:visited, .btn-eliminar:visited {
+  color: inherit;
+}
+
+/* Contenedor general de productos en el panel administrativo */
+.contenedor-productos-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Tarjeta individual de producto para el administrador */
+.tarjeta-producto-admin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf5e6;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Información del producto en la tarjeta */
+.tarjeta-info {
+  flex: 1;
+}
+
+/* Nombre del producto */
+.tarjeta-nombre {
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* Categoría asignada */
+.tarjeta-categoria {
+  margin: 0;
+  font-size: 12px;
+  color: brown;
+  text-align: left;
+}
+
+/* Visor de precio en la tarjeta admin */
+.tarjeta-precio {
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Botones de acción (Editar / Eliminar) */
+.tarjeta-acciones {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botón para agregar un nuevo producto */
+.btn-agregar {
+  display: inline-block;
+  background-color: #fdf5e6;
+  color: brown;
+  border: 2px solid brown;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.btn-agregar:hover {
+  background-color: brown;
+  color: #fdf5e6;
+}
+
+/* Botón para cerrar sesión administrativa */
+.btn-cerrar-sesion {
+  display: inline-block;
+  background-color: brown;
+  color: #fdf5e6;
+  border: 2px solid brown;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #5a1a1a;
+  color: #fdf5e6;
+}
+
+.btn-cerrar-sesion:visited, .btn-agregar:visited {
+  color: inherit;
+}
+
+
+/* ==========================================================================
+   COMPONENTES ADICIONALES (CARRUSEL Y PAGO)
+   ========================================================================== */
+
+/* Carrusel de imágenes promocionales en la página de inicio */
+.carousel {
+  z-index: 1;
+  max-height: 350px;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.carousel img {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Botones de selección de método de pago (tarjeta seleccionada) */
+.metodo-btn.seleccionado {
+  border-color: brown;
+  background-color: brown;
+  color: #fdf5e6;
+}
+
+.metodo-btn.seleccionado p {
+  color: #fdf5e6;
+}
+
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (PANTALLAS MÓVILES - HASTA 768PX)
+   ========================================================================== */
 @media (max-width: 768px) {
 
+  /* Espaciado del cuerpo reducido en móviles */
   body {
     padding: 10px;
   }
 
+  /* Caja contenedora se expande al 95% de la pantalla */
   .menu {
     width: 95%;
     padding: 15px;
     margin-top: 20px;
   }
 
+  /* Navegación colapsada a formato vertical */
   .banner-flotante {
     flex-direction: column;
     margin-left: -10px;
@@ -323,6 +562,7 @@ img {
     justify-content: center;
   }
 
+  /* Escalamiento de títulos */
   h1 {
     font-size: 28px;
   }
@@ -331,17 +571,14 @@ img {
     font-size: 22px;
   }
 
-  .item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
+  /* Fila de productos adaptada */
   .item {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    gap: 6px;
   }
+
   .flavor, .dessert {
     flex: 1 1 50%;
   }
@@ -351,6 +588,12 @@ img {
     text-align: right;
   }
 
+  .cantidad-control {
+    flex: 0 1 auto;
+    margin-left: auto;
+  }
+
+  /* Botón flotante del carrito en móviles (abajo a la derecha) */
   .carrito-flotante {
     width: 55px;
     height: 55px;
@@ -359,177 +602,15 @@ img {
     right: 20px;
   }
 
+  /* Formularios ocupan el ancho total */
   .formulario {
     width: 100%;
     padding: 20px;
   }
 
-  .tabla-admin {
-    font-size: 12px;
-  }
-
-  .tabla-admin th, .tabla-admin td {
-    padding: 5px;
-  }
-
+  /* Tarjetas de Quiénes Somos se ajustan a columna única */
   .bloque-tarjeta {
     width: 100% !important;
     align-self: unset !important;
   }
-  .cantidad-control {
-    flex: 0 1 auto;
-    margin-left: auto;
-  }
-}
-
-/*botones admin */
-.btn-editar, .btn-eliminar {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.btn-editar {
-    background-color: burlywood;
-    color: brown;
-    border: 1px solid brown;
-}
-
-.btn-editar:hover {
-    background-color: brown;
-    color: burlywood;
-}
-
-.btn-eliminar {
-    background-color: brown;
-    color: #fdf5e6;
-    border: 1px solid brown;
-}
-
-.btn-eliminar:hover {
-    background-color: #5a1a1a;
-    color: #fdf5e6;
-}
-
-.btn-editar:visited, .btn-eliminar:visited {
-    color: inherit;
-}
-.tabla-admin td:last-child {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-.tabla-admin td {
-    padding: 12px 8px;
-}
-.contenedor-productos-admin {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.tarjeta-producto-admin {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fdf5e6;
-  border-radius: 8px;
-  padding: 12px 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.tarjeta-info {
-  flex: 1;
-}
-
-.tarjeta-nombre {
-  margin: 0;
-  font-weight: bold;
-  font-size: 15px;
-  text-align: left;
-}
-
-.tarjeta-categoria {
-  margin: 0;
-  font-size: 12px;
-  color: brown;
-  text-align: left;
-}
-
-.tarjeta-precio {
-  margin: 0 20px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.tarjeta-acciones {
-  display: flex;
-  gap: 8px;
-}
-.btn-agregar {
-  display: inline-block;
-  background-color: #fdf5e6;
-  color: brown;
-  border: 2px solid brown;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 15px;
-}
-
-.btn-agregar:hover {
-  background-color: brown;
-  color: #fdf5e6;
-}
-
-.btn-cerrar-sesion {
-  display: inline-block;
-  background-color: brown;
-  color: #fdf5e6;
-  border: 2px solid brown;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 15px;
-}
-
-.btn-cerrar-sesion:hover {
-  background-color: #5a1a1a;
-  color: #fdf5e6;
-}
-
-.btn-cerrar-sesion:visited, .btn-agregar:visited {
-  color: inherit;
-}
-
-/* Carrusel */
-.carousel {
-  z-index: 1;
-  max-height: 350px;
-  max-width: 600px;
-  overflow: hidden;
-  margin: 0 auto;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-.carousel img {
-  height: 350px;
-  object-fit: cover;
-}
-
-/*Botones de pago*/
-.metodo-btn.seleccionado {
-    border-color: brown;
-    background-color: brown;
-    color: #fdf5e6;
-}
-
-.metodo-btn.seleccionado p {
-    color: #fdf5e6;
 }

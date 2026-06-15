@@ -19,8 +19,6 @@
 
     <div class="menu">
       <main>
-        
-      <main>
         <h1>Cafe Luna</h1>
         <p class="established">Resumen de tu pedido</p>
         <hr>
@@ -35,7 +33,6 @@
             <h2>Total a Pagar: $<span id="total-final-pagina">0</span></h2>
             <a href="pago.php"><button class="btn-cerrar-sesion">Proceder al Pago</button></a>
         </section>
-      </main>
       </main>
       <hr class="bottom-line">
       <footer>

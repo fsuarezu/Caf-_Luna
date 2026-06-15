@@ -33,7 +33,7 @@
               Gral. Jofré 466<br>
               Santiago, Región Metropolitana<br>
               Teléfono: +56 9 7858 4981
-            </address>
+          </address>
           </div>
 
           <!-- Horarios de atención al público -->
