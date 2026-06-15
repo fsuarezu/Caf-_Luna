@@ -70,7 +70,7 @@ if (!isset($_SESSION["admin"])) {
             </div>
 
             <br>
-            <a href="AdminPhps/adminCerrarSesion.php" class="btn-cerrar-sesion">Cerrar sesión</a>
+            <a href="logout.php" class="btn-cerrar-sesion">Cerrar sesión</a>
         </main>
     </div>
 </body>
