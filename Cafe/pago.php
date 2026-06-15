@@ -1,3 +1,9 @@
+<?php
+/**
+ * Vista de Selección de Método de Pago
+ * Permite confirmar datos del cliente, elegir método de pago y finalizar la orden.
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +22,7 @@
             <hr>
             <?php include("phps/mensaje.php"); ?>
 
+            <!-- Formulario de pago que incluye inputs ocultos con el contenido del carrito -->
             <form action="phps/procesarPago.php" method="POST" class="formulario">
                 <input type="hidden" name="productos" id="input-productos" value="">
                 <input type="hidden" name="total" id="input-total" value="">
@@ -26,6 +33,7 @@
                 <input type="email" name="correo" placeholder="tu@correo.com" required><br>
 
                 <h2>Método de Pago</h2>
+                <!-- Opciones para seleccionar tarjetas de Crédito o Débito -->
                 <div class="metodos-pago">
                     <button type="button" class="metodo-btn" id="btn-credito" onclick="seleccionar('credito')">
                         <img src="imagenes/credito.svg" alt="Crédito">
@@ -46,6 +54,7 @@
         <footer></footer>
     </div>
 
+    <!-- Script para controlar la selección visual del botón de pago e inyectar el contenido de localStorage en el formulario -->
     <script>
         function seleccionar(metodo) {
             document.getElementById("metodo-seleccionado").value = metodo;

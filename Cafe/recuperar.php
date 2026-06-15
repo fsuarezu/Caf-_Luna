@@ -11,8 +11,12 @@
     <div class="menu">
         <main>
             <h1>Recuperar Contraseña</h1>
+
+            <?php /* Mostramos mensajes de éxito o error según corresponda */ ?>
             <?php include("phps/mensaje.php"); ?>
             <hr>
+
+            <?php /* Formulario para ingresar el correo y solicitar recuperación */ ?>
             <form action="phps/recuperarProcesar.php" method="POST" class="formulario">
                 <label>Correo electrónico:</label><br>
                 <input type="email" name="correo" placeholder="ejemplo@mail.com" required><br>

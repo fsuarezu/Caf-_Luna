@@ -1,3 +1,9 @@
+<?php
+/**
+ * Página de Inicio
+ * Presenta el carrusel de promociones, productos destacados y el acceso a la carta.
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,6 +18,7 @@
 
     <?php include("phps/banner.php"); ?>
   
+    <!-- Carrusel de imágenes promocionales con intervalo de 4 segundos -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -45,6 +52,7 @@
         <p class="established">Est. 2026</p>
         <hr>
         
+        <!-- Sección que muestra una selección de productos destacados y enlace al menú completo -->
         <section>
           <h2>Productos Destacados</h2>
           <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="Icono de café"/>

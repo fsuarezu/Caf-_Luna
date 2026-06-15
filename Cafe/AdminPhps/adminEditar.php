@@ -8,6 +8,7 @@ if (!isset($_SESSION["admin"])) {
 }
 
 include(dirname(__FILE__) . "/../bd/conexion.php");
+$conexion = conectarDB();
 
 // Obtenemos el id del producto desde la URL
 $id = ($_GET["id"]);
@@ -26,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Actualizamos el producto en la base de datos
     $conexion->query("UPDATE producto SET nombre='$nombre', precio='$precio', id_categoria='$id_categoria' WHERE id='$id'");
 
-    // Redirigimos al panel de administración
-    header("Location: ../admin.php");
+    // Redirigimos al panel de entrada principal
+    header("Location: ../principal.php");
     exit();
 }
 
@@ -70,7 +71,7 @@ $categorias = $conexion->query("SELECT * FROM categoria");
                 <button type="submit">Guardar cambios</button>
             </form>
             <br>
-            <a href="../admin.php" class="btn-cerrar-sesion">Volver</a>
+            <a href="../principal.php" class="btn-cerrar-sesion">Volver</a>
         </main>
     </div>
 </body>

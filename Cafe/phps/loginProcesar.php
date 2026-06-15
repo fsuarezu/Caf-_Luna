@@ -1,6 +1,7 @@
 <?php
 session_start();
 include(dirname(__FILE__) . "/../bd/conexion.php");
+$conexion = conectarDB();
 
 // Verificamos que el formulario fue enviado por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 setcookie("recordar_correo", $token, strtotime("+30 days"), "/");
             }
 
-            // Redirigimos al panel de administración
-            header("Location: ../admin.php");
+            // Redirigimos al panel de entrada principal
+            header("Location: ../principal.php");
             exit();
         }
     }

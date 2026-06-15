@@ -1,9 +1,15 @@
+<?php
+/**
+ * Vista de Inicio de Sesión
+ * Permite ingresar credenciales para acceder al panel de administración.
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - Cafe Luna</title>
+    <title>Inicio de sesion</title>
     <link href="estilos/estilos.css" rel="stylesheet"/>
   </head>
   <body>
@@ -16,12 +22,13 @@
         <?php include ("phps/mensaje.php"); ?>
         <hr>
         
+        <!-- Formulario de inicio de sesión que redirige a loginProcesar.php -->
         <form action="phps/loginProcesar.php" method="POST" class="formulario">
           
           <label for="correo">Correo electrónico:</label><br>
           <input type="email" id="correo" name="correo" placeholder="ejemplo@mail.com" required><br>
 
-          <label for="telefono">Contraseña:</label><br>
+          <label for="contrasenia">Contraseña:</label><br>
           <input type="password" id="contrasenia" name="contrasenia" required><br>
 
           <div class="checkbox-group">

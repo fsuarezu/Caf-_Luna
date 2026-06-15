@@ -1,5 +1,6 @@
 <?php
 include(dirname(__FILE__) . "/../bd/conexion.php");
+$conexion = conectarDB();
 
 // Verificamos que el formulario fue enviado por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

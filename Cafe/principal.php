@@ -1,12 +1,12 @@
 <?php
 session_start();
+include("bd/conexion.php");
+$conexion = conectarDB();
 
 // Si no hay sesión activa, verificamos si hay una cookie de "recordar sesión"
 if (!isset($_SESSION["admin"]) && isset($_COOKIE["recordar_correo"])) {
     $token = $_COOKIE["recordar_correo"];
     $hoy = date("Y-m-d H:i:s");
-
-    include("bd/conexion.php");
 
     // Buscamos el token en la BD y verificamos que no haya vencido
     $resultado = $conexion->query("SELECT usuario.correo FROM token 
@@ -25,8 +25,6 @@ if (!isset($_SESSION["admin"])) {
     header("Location: login.php");
     exit();
 }
-
-include("bd/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

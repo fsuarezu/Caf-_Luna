@@ -1,5 +1,6 @@
 <?php
 include(dirname(__FILE__) . "/../bd/conexion.php");
+$conexion = conectarDB();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = htmlspecialchars(trim($_POST["correo"]));

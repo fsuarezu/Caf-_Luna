@@ -1,3 +1,9 @@
+<?php
+/**
+ * Vista de Quiénes Somos
+ * Describe la historia, filosofía y el ambiente físico de Café Luna.
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +23,7 @@
       </main>
     </div>
 
+    <!-- Sección informativa organizada en tarjetas con distribución visual de zigzag -->
     <section class="contenedor-zigzag">
       
       <div class="bloque-tarjeta">

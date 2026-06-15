@@ -1,3 +1,9 @@
+<?php
+/**
+ * Carta Digital de Productos
+ * Menú completo interactivo con controles de cantidad para el carrito de compras.
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +25,7 @@
         <h1>Cafe Luna</h1>
         <p class="established">Est. 2026</p>
         <hr>
+        <!-- Categoría: Cafés y Especialidades -->
         <section>
           <h2>Cafés y Especialidades</h2>
           <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="icono de café"/>
@@ -113,6 +120,7 @@
             </div>
           </article>
         </section>
+        <!-- Categoría: Sándwiches y Salados -->
         <section>
           <h2>Sándwiches y Salados</h2>
           <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="icono de comida salada"/>
@@ -167,6 +175,7 @@
             </div>
           </article>
         </section>
+        <!-- Categoría: Repostería y Dulces -->
         <section>
         <h2>Repostería y Dulces</h2>
         <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="icono de repostería"/>
@@ -243,6 +252,7 @@
             </div>
         </article>
       </section>
+      <!-- Categoría: Bebidas Frías -->
       <section>
         <h2>Bebidas Frías</h2>
         <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="icono de bebida fría"/>

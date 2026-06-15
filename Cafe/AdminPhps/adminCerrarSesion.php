@@ -6,6 +6,7 @@ if (isset($_COOKIE["recordar_correo"])) {
     $token = $_COOKIE["recordar_correo"];
     
     include(dirname(__FILE__) . "/../bd/conexion.php");
+    $conexion = conectarDB();
     
     // Eliminamos el token de la base de datos
     $conexion->query("DELETE FROM token WHERE token = '$token'");

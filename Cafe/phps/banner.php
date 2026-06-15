@@ -1,3 +1,4 @@
+<!-- Banner flotante de navegación superior, incluido de forma dinámica en las páginas públicas -->
 <header class="banner-flotante">
     <div class="banner-imagen">
         <img src="imagenes/logo.png" alt="Banner de Café">

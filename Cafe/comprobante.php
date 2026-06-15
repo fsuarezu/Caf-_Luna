@@ -1,5 +1,6 @@
 <?php
 include("bd/conexion.php");
+$conexion = conectarDB();
 
 // Obtenemos el id del pedido desde la URL
 $id = $_GET["id"];

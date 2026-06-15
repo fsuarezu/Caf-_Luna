@@ -1,3 +1,9 @@
+<?php
+/**
+ * Vista de Formulario de Contacto
+ * Permite a los usuarios enviar mensajes para cotizaciones, dudas, reservas, etc.
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +23,7 @@
         <?php include ("phps/mensaje.php"); ?>
         <hr>
         
+        <!-- Formulario de contacto que envía los datos a contacto.php usando método POST -->
         <form action="contacto.php" method="POST" class="formulario">
           <label for="nombre">Nombre completo:</label><br>
           <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required><br>

@@ -1,5 +1,6 @@
 <?php
 include("bd/conexion.php");
+$conexion = conectarDB();
 
 // Obtenemos el token desde la URL
 $token = $_GET["token"];

@@ -8,6 +8,7 @@ if (!isset($_SESSION["admin"])) {
 }
 
 include(dirname(__FILE__) . "/../bd/conexion.php");
+$conexion = conectarDB();
 
 // Si el formulario fue enviado por POST, procesamos el nuevo producto
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insertamos el nuevo producto en la base de datos
     $conexion->query("INSERT INTO producto (nombre, precio, id_categoria) VALUES ('$nombre', '$precio', '$id_categoria')");
 
-    // Redirigimos al panel de administración
-    header("Location: ../admin.php");
+    // Redirigimos al panel de entrada principal
+    header("Location: ../principal.php");
     exit();
 }
 
@@ -59,7 +60,7 @@ $categorias = $conexion->query("SELECT * FROM categoria");
                 <button type="submit">Agregar</button>
             </form>
             <br>
-            <a href="../admin.php" class="btn-cerrar-sesion">Volver</a>
+            <a href="../principal.php" class="btn-cerrar-sesion">Volver</a>
         </main>
     </div>
 </body>

@@ -1,3 +1,9 @@
+<?php
+/**
+ * Vista del Carrito de Compras
+ * Muestra el desglose de productos elegidos, calcula totales y redirige a la vista de pago.
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
