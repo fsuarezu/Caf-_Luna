@@ -37,6 +37,9 @@ $productos = json_decode($pedido["productos"], true);
 
             <!-- Mostramos los datos del pedido -->
             <p><strong>N° de pedido:</strong> #<?php echo $pedido["id"]; ?></p>
+            <div style="text-align: center; margin: 15px 0;">
+                <svg id="barcode"></svg>
+            </div>
             <p><strong>Nombre:</strong> <?php echo $pedido["nombre"]; ?></p>
             <p><strong>Correo:</strong> <?php echo $pedido["correo"]; ?></p>
             <p><strong>Método de pago:</strong> <?php echo ucfirst($pedido["nombre_metodo"]); ?></p>
@@ -63,10 +66,20 @@ $productos = json_decode($pedido["productos"], true);
         <footer></footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     <script>
         // Limpiamos el carrito del navegador después de confirmar el pedido
         localStorage.removeItem("carritoCafeLuna");
         localStorage.removeItem("totalCafeLuna");
+
+        // Generamos el código de barras
+        JsBarcode("#barcode", "<?php echo $pedido['id']; ?>", {
+            format: "CODE128",
+            lineColor: "#3d2a1d",
+            width: 2.2,
+            height: 50,
+            displayValue: false
+        });
     </script>
 </body>
 </html>

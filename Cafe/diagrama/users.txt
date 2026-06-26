@@ -1,3 +1,6 @@
 admin@cafeluna.cl
 admin1234
 
+
+caja@cafeluna.cl
+admin1234

@@ -34,6 +34,12 @@ CREATE TABLE metodo (
     nombre CHAR(8) NOT NULL
 );
 
+-- Tabla de estados de pedido
+CREATE TABLE estado_pedido (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(20) NOT NULL
+);
+
 -- Tabla de productos
 CREATE TABLE producto (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -59,8 +65,10 @@ CREATE TABLE pedido (
     id_metodo INT NOT NULL,
     productos TEXT NOT NULL,
     total INT NOT NULL,
+    id_estado INT NOT NULL DEFAULT 1,
     fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_metodo) REFERENCES metodo(id)
+    FOREIGN KEY (id_metodo) REFERENCES metodo(id),
+    FOREIGN KEY (id_estado) REFERENCES estado_pedido(id)
 );
 
 -- Datos iniciales: categorías
@@ -74,6 +82,12 @@ INSERT INTO categoria (nombre) VALUES
 INSERT INTO metodo (nombre) VALUES
 ('credito'),
 ('debito');
+
+-- Datos iniciales: estados de pedido
+INSERT INTO estado_pedido (nombre) VALUES
+('pendiente'),
+('listo'),
+('entregado');
 
 -- Datos iniciales: productos
 INSERT INTO producto (nombre, precio, id_categoria) VALUES
@@ -106,3 +120,7 @@ INSERT INTO producto (nombre, precio, id_categoria) VALUES
 -- Usuario administrador (contraseña: admin1234)
 INSERT INTO usuario (correo, contrasenia, rol) VALUES
 ('admin@cafeluna.cl', '$2y$10$FEyUBX39qvOHv/WRX6tzquTjj5MZnEkVuH.eo/ESzCeDKzcQQdiha', 'admin');
+
+-- Usuario cajero (contraseña: admin1234)
+INSERT INTO usuario (correo, contrasenia, rol) VALUES
+('caja@cafeluna.cl', '$2y$10$FEyUBX39qvOHv/WRX6tzquTjj5MZnEkVuH.eo/ESzCeDKzcQQdiha', 'caja');

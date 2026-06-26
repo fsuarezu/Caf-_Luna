@@ -31,6 +31,12 @@
           <label for="contrasenia">Contraseña:</label><br>
           <input type="password" id="contrasenia" name="contrasenia" required><br>
 
+          <label for="rol">Ingresar como:</label><br>
+          <select id="rol" name="rol" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid black;">
+              <option value="admin">Administrador</option>
+              <option value="caja">Caja / Cajero</option>
+          </select><br>
+
           <div class="checkbox-group">
               <input type="checkbox" id="recordar" name="recordar">
               <label for="recordar">Recordar sesión</label>

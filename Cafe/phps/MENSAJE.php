@@ -40,6 +40,9 @@ elseif (isset($_GET['error'])): ?>
 
         // Error en recuperación de contraseña: el token venció o no es válido
         'token'=>'El enlace ha vencido o no es válido.',
+
+        // Error de rol: el rol seleccionado no coincide con la cuenta
+        'rol'=>'El rol seleccionado no corresponde a esta cuenta.',
     ];
 
     // Si el error no está en el arreglo, mostramos un mensaje genérico
