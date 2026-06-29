@@ -1,6 +1,5 @@
--- Base de datos Café Luna
--- Proyecto: Sistema de Cafetería
--- Asignatura: Desarrollo Web
+--Lucas Leiva
+--Fabian Suárez
 
 CREATE DATABASE IF NOT EXISTS cafe_luna;
 USE cafe_luna;
