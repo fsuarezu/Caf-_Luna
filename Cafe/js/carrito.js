@@ -12,10 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnSumar.addEventListener("click", () => {
       let cantidadActual = parseInt(spanCantidad.textContent);
-      spanCantidad.textContent = cantidadActual + 1;
-      
-      // Guardamos en memoria cada vez que hay un cambio
-      guardarCarrito();
+      const stockMax = parseInt(producto.getAttribute("data-stock") || 0);
+
+      if (cantidadActual < stockMax) {
+        spanCantidad.textContent = cantidadActual + 1;
+        guardarCarrito();
+      } else {
+        alert("Lo sentimos, no hay suficiente stock disponible de este producto.");
+      }
     });
 
     btnRestar.addEventListener("click", () => {

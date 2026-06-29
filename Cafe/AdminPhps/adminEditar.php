@@ -23,9 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = htmlspecialchars(trim($_POST["nombre"]));
     $precio = ($_POST["precio"]);
     $id_categoria = ($_POST["id_categoria"]);
+    $stock = (int)$_POST["stock"];
 
     // Actualizamos el producto en la base de datos
-    $conexion->query("UPDATE producto SET nombre='$nombre', precio='$precio', id_categoria='$id_categoria' WHERE id='$id'");
+    $conexion->query("UPDATE producto SET nombre='$nombre', precio='$precio', id_categoria='$id_categoria', stock='$stock' WHERE id='$id'");
 
     // Redirigimos al panel de entrada principal
     header("Location: ../principal.php");
@@ -67,6 +68,9 @@ $categorias = $conexion->query("SELECT * FROM categoria");
                         </option>
                     <?php endwhile; ?>
                 </select><br>
+
+                <label>Stock:</label><br>
+                <input type="number" name="stock" value="<?php echo $producto['stock']; ?>" min="0" required><br>
 
                 <button type="submit">Guardar cambios</button>
             </form>

@@ -43,6 +43,8 @@ elseif (isset($_GET['error'])): ?>
 
         // Error de rol: el rol seleccionado no coincide con la cuenta
         'rol'=>'El rol seleccionado no corresponde a esta cuenta.',
+        // Error de stock insuficiente
+        'stock'=> isset($_GET['msg']) ? htmlspecialchars($_GET['msg']) : 'No hay suficiente stock para completar la compra.',
     ];
 
     // Si el error no está en el arreglo, mostramos un mensaje genérico

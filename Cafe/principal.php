@@ -282,8 +282,13 @@ $top_productos = array_slice($ventas_productos, 0, 5, true);
                     ?>
                     <div class="tarjeta-producto-admin">
                         <div class="tarjeta-info">
-                            <p class="tarjeta-nombre"><?php echo $fila["nombre"]; ?></p>
-                            <p class="tarjeta-categoria"><?php echo $fila["nombre_categoria"]; ?></p>
+                            <p class="tarjeta-nombre"><?php echo htmlspecialchars($fila["nombre"]); ?></p>
+                            <p class="tarjeta-categoria">
+                                <?php echo htmlspecialchars($fila["nombre_categoria"]); ?> | 
+                                <span style="<?php echo $fila['stock'] == 0 ? 'color: red; font-weight: bold;' : ''; ?>">
+                                    Stock: <?php echo $fila["stock"]; ?>
+                                </span>
+                            </p>
                         </div>
                         <p class="tarjeta-precio">$<?php echo number_format($fila["precio"], 0, ',', '.'); ?></p>
                         <div class="tarjeta-acciones">

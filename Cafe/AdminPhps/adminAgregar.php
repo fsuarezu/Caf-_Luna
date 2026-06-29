@@ -17,9 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = htmlspecialchars(trim($_POST["nombre"]));
     $precio = ($_POST["precio"]);
     $id_categoria = ($_POST["id_categoria"]);
+    $stock = (int)$_POST["stock"];
 
     // Insertamos el nuevo producto en la base de datos
-    $conexion->query("INSERT INTO producto (nombre, precio, id_categoria) VALUES ('$nombre', '$precio', '$id_categoria')");
+    $conexion->query("INSERT INTO producto (nombre, precio, id_categoria, stock) VALUES ('$nombre', '$precio', '$id_categoria', '$stock')");
 
     // Redirigimos al panel de entrada principal
     header("Location: ../principal.php");
@@ -56,6 +57,9 @@ $categorias = $conexion->query("SELECT * FROM categoria");
                         <option value="<?php echo $cat['id']; ?>"><?php echo $cat['nombre']; ?></option>
                     <?php endwhile; ?>
                 </select><br>
+
+                <label>Stock Inicial:</label><br>
+                <input type="number" name="stock" min="0" value="0" required><br>
 
                 <button type="submit">Agregar</button>
             </form>
