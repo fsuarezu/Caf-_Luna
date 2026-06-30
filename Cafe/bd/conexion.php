@@ -6,9 +6,10 @@ function conectarDB() {
     $usuario  = "root";
     $password = "";
     $dbName   = "cafe_luna";
+    $port     = 3307; // Puerto de MySQL configurado en XAMPP
 
     // Intentar crear la conexión
-    $conexion = new mysqli($host, $usuario, $password, $dbName);
+    $conexion = new mysqli($host, $usuario, $password, $dbName, $port);
 
     // Verificar si hubo un error en la conexión
     if ($conexion->connect_error) {

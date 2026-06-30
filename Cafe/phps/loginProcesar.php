@@ -28,14 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (isset($_POST["recordar"])) {
                     // Generamos un token seguro aleatorio
                     $token = bin2hex(random_bytes(32));
-                    $expiracion = date("Y-m-d H:i:s", strtotime("+30 days"));
+                    $expiracion = date("Y-m-d H:i:s", strtotime("+1 day"));
                     $id = $usuario["id"];
 
                     // Guardamos el token en la base de datos
                     $conexion->query("INSERT INTO token (usuario_id, token, expiracion) VALUES ('$id', '$token', '$expiracion')");
 
-                    // Guardamos el token en una cookie por 30 días
-                    setcookie("recordar_correo", $token, strtotime("+30 days"), "/");
+                    // Guardamos el token en una cookie por 1 día
+                    setcookie("recordar_correo", $token, strtotime("+1 day"), "/");
                 }
 
                 if ($rol_seleccionado === "admin") {
